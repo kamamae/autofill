@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 20px auto;
   align-items: center;
-  padding: 6rem;
+  /* padding:  3rem 2rem; */
   min-height: 100vh;
+  hyphens: auto;
+  width: auto;
+  box-shadow: 2px 2px 5px 3px rgb(189, 189, 189);
 }
 
 .description {
@@ -226,4 +230,85 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+
+.docBody {
+  width: 100%;
+}
+
+.heading {
+
+}
+
+.aboutMe {
+  margin-bottom: 10px;
+}
+
+.condition {
+
+}
+
+.solution {
+
+}
+
+.conclusion {
+  margin-top: 20px;
+}
+
+.formalData {
+  width: 400px;
+}
+
+.digit {
+  margin: 0;
+  width: 2.6%;
+  height: 20px;
+  box-shadow: none;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.inputDropDown {
+  display: inline;
+}
+
+.inputDropDown_input {
+  display: inline;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 12pt;
+}
+
+.inputDropDown_underInput {
+  position: absolute;
+  background: #e2e2e2;
+  border-radius: 10px;
+  padding: 10px;
+  height: auto;
+}
+
+.inputDropDown_underInputButton {
+  width: 50px;
+}
+
+.fio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: -20px;
+  padding: 0;
+}
+
+.fioChild {
+  margin: 0;
+  padding: 0;
+  font-size: 12pt;
+}
+
+.digits {
+  margin: 0;
 }
