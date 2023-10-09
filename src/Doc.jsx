@@ -15,7 +15,6 @@ function Doc() {
   }
 
 
-
   const ThirtyEightInputs = () => {
     const nums = [...Array(38).keys()]
     return nums.map((x, i) => {

@@ -10,6 +10,16 @@ import { listen } from '@tauri-apps/api/event';
 import jsPDF from 'jspdf';
 
 function App() {
+  const [selectedDocument, setSelectedDocument] = useState("default");
+
+  function Docu({ document }) {
+    switch(document) {
+      case "doc1":
+        return <Doc/>
+      default:
+        return <div>Протокол</div>
+    }
+}
 
   function generatePDF() {
     
@@ -26,11 +36,18 @@ function App() {
     setTimeout(function() { window.location=window.location;},3000);}
   useEffect(() => {
     const handleMenuItemClick = (menuItem) => {
-      if(menuItem === 'print') {
-        javascript:window.print()
+      switch(menuItem){
+        case 'print':
+            javascript:window.print();
+            break;
+        case 'doc1':
+            setSelectedDocument("doc1");
+            break;
+        default:
+            setSelectedDocument("default")
       }
     };
-
+  
     listen('menuItemClicked', (event) => {
       const { payload } = event;
       handleMenuItemClick(payload);
@@ -63,7 +80,7 @@ function App() {
     <>
     {isLoaded && <main className={styles.main}>
 
-     <Doc/>
+    <Docu document={selectedDocument} />
       
     </main>}
     </>
